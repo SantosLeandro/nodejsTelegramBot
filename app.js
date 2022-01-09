@@ -12,7 +12,7 @@ function sendMessage(chatId, text){
 
 app.use('',(req, res)=>{
     console.log(req.body);
-    sendMessage(req.body.message.chat.id,'Hello!');
+    //sendMessage(req.body.message.chat.id,'Hello!');
     res.sendStatus( 200 );
 });
 
