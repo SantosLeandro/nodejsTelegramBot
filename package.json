@@ -1,0 +1,22 @@
+{
+  "name": "nodejsTelegramBot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SantosLeandro/nodejsTelegramBot.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/SantosLeandro/nodejsTelegramBot.git"
+  },
+  "homepage": "https://github.com/SantosLeandro/nodejsTelegramBot#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
