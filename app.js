@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 5000;
 const token = process.env.TOKEN;
 
 function sendMessage(chatId, text){
-    https.get('https://api.telegram.org/bot'+token+'/sendMessage?chatId='+chatId+'&text='+text,()=>{
+    https.get('https://api.telegram.org/bot'+token+'/sendMessage?chat_id='+chatId+'&text='+text,()=>{
 
     });
 }
