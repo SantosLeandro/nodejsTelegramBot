@@ -12,9 +12,11 @@ function sendMessage(chatId, text){
 }
 
 app.use(express.json());
+app.use(express.urlencoded({extended:false}));
 app.use('',(req, res)=>{
     console.log(req.body);
-      sendMessage(req.body.message.id,'Hello!');
+    console.log("chat_id: "+req.body.message.chat.id);
+      sendMessage(req.body.message.chat.id,'Hello!');
     res.sendStatus( 200 );
 });
 
