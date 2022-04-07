@@ -6,7 +6,7 @@ const token = process.env.TOKEN;
 const botName = process.env.BOTNAME;
 
 function sendMessage(chatId, text){
-    https.get('https://api.telegram.org/bot'+token+'/sendMessage?chatId='+chatId+'&text='+text,()=>{
+    https.get('https://api.telegram.org/bot'+token+'/sendMessage?chat_id='+chatId+'&text='+text,()=>{
 
     });
 }
@@ -17,7 +17,7 @@ app.use('',(req, res)=>{
     console.log(req.body);
     console.log("chat_id: "+req.body.message.chat.id);
       sendMessage(req.body.message.chat.id,'Hello!');
-    res.sendStatus( 200 );
+      res.sendStatus( 200 );
 });
 
 
