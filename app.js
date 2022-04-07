@@ -22,7 +22,9 @@ app.use(express.urlencoded({extended:false}));
 app.use('',(req, res)=>{
     console.log(req.body);
     console.log("chat_id: "+req.body.message.chat.id);
-    checkCommand(req.body.message.text, "/teste", () =>  sendMessage(req.body.message.chat.id,'Hello!') );
+    checkCommand(req.body.message.text, "/teste", () =>  sendMessage(req.body.message.chat.id,'Bot funcionando!') );
+    checkCommand(req.body.message.text, "/salve", () =>  sendMessage(req.body.message.chat.id,'Salve!') );
+    checkCommand(req.body.message.text, "/comando", () =>  sendMessage(req.body.message.chat.id,'comando 1 funcionando!') );
       //sendMessage(req.body.message.chat.id,'Hello!');
       res.sendStatus( 200 );
 });
