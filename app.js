@@ -11,7 +11,7 @@ function sendMessage(chatId, text){
     });
 }
 
-
+app.use(express.json());
 app.use('',(req, res)=>{
     console.log(req.body);
    // sendMessage(req.body.message.chat.id,'Hello!');
@@ -19,4 +19,4 @@ app.use('',(req, res)=>{
 });
 
 
-app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
+app.listen(PORT, () => console.log(`Bot Listening on ${ PORT }`));
