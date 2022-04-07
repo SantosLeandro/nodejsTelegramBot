@@ -11,12 +11,19 @@ function sendMessage(chatId, text){
     });
 }
 
+function checkCommand(message, command, callback){
+    if(message == command || message == command+"@"+botName){
+        callback();
+    }
+}
+
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 app.use('',(req, res)=>{
     console.log(req.body);
     console.log("chat_id: "+req.body.message.chat.id);
-      sendMessage(req.body.message.chat.id,'Hello!');
+    checkCommand(req.body.message.text, "/teste", () =>  sendMessage(req.body.message.chat.id,'Hello!') );
+      //sendMessage(req.body.message.chat.id,'Hello!');
       res.sendStatus( 200 );
 });
 
