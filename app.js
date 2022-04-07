@@ -14,7 +14,7 @@ function sendMessage(chatId, text){
 
 app.use('',(req, res)=>{
     console.log(req.body);
-    sendMessage(req.body.message.id,'Hello!');
+   // sendMessage(req.body.message.chat.id,'Hello!');
     res.sendStatus( 200 );
 });
 
