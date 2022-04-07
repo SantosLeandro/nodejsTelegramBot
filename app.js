@@ -20,11 +20,12 @@ function checkCommand(message, command, callback){
 
 app.use('',(req, res)=>{
     console.log(req.body);
-	var chatId = req.body.message.chat.id;
-	var message = req.body.message.text;
-	checkCommand(message, "/salve", ()=>sendMessage(chatId, "Hello!"));
+	//var chatId = req.body.message.chat.id;
+	//var message = req.body.message.text;
+	//checkCommand(message, "/salve", ()=>sendMessage(chatId, "Hello!"));
 	//if(checkCommand(message,"/salve"))
 	//	sendMessage(chatId,'Hello!');
+	sendMessage(req.body.message.id,'Hello!');
     res.sendStatus( 200 );
 });
 
