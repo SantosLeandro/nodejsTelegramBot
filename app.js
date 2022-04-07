@@ -14,7 +14,10 @@ function sendMessage(chatId, text){
 app.use(express.json());
 app.use('',(req, res)=>{
     console.log(req.body);
-   // sendMessage(req.body.message.chat.id,'Hello!');
+    if(req.body.message.text == "/salve" || req.body.message.text == "/salve@"+botName)
+      sendMessage(req.body.message.chat.id,'Hello!');
+    if(req.body.message.text == "/teste" || req.body.message.text == "/salve@"+botName)
+      sendMessage(req.body.message.chat.id,'Teste 01 funcionando!');
     res.sendStatus( 200 );
 });
 
