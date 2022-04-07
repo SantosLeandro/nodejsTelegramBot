@@ -13,7 +13,7 @@ function sendMessage(chatId, text){
 
 
 function checkCommand(message, command, callback){
-	if(message.text == command || message.text == (command+"@"+botName)){
+	if(message == command || message == (command+"@"+botName)){
 		callback();
 	}
 }
